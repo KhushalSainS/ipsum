@@ -35,4 +35,13 @@
 			</property>
 		</properties>
 	</rule>
+
+	<!-- serialize_block_attributes() encodes a value for the JSON in a block delimiter, which is not HTML output. -->
+	<rule ref="WordPress.Security.EscapeOutput">
+		<properties>
+			<property name="customEscapingFunctions" type="array">
+				<element value="serialize_block_attributes"/>
+			</property>
+		</properties>
+	</rule>
 </ruleset>
